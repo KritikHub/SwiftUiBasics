@@ -15,24 +15,19 @@ struct SongGenreCarousel: View {
         self.songs = songs
         self.genre = genre
     }
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(genre.rawValue)
-                .font(.system(size: 20, weight: .medium))
+                .font(.system(size: 24, weight: .medium))
                 .foregroundStyle(Color.white)
             songGenre
         }
     }
-    
-    
-    
     var songGenre: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             genreCarousel
         }
     }
-    
     private var genreCarousel: some View {
         HStack(spacing: 10) {
             ForEach(songs) { song in 
@@ -40,18 +35,14 @@ struct SongGenreCarousel: View {
                 case .myMix:
                     recentCardView(recentPlayList: song)
                 case .madeForJames:
-                    SongPlaylistCardView()
+                    SongPlaylistCardView(song: song)
                 case .yourTopMixes:
-                    SongPlaylistCardView()
+                    SongPlaylistCardView(song: song)
                 case .basedOnRecentListening:
-                    SongPlaylistCardView()
+                    SongPlaylistCardView(song: song)
                 }
             }
         }
-        .clipShape(RoundedRectangle(cornerRadius: 5))
     }
 }
 
-#Preview {
-    SongGenreCarousel()
-}

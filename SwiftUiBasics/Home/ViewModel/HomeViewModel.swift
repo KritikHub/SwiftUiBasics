@@ -18,9 +18,9 @@ struct HomeViewModel {
 }
 
 enum songGenre: String, CaseIterable, Decodable  {
-    case myMix = "myMix"
-    case madeForJames = "madeForJames"
-    case yourTopMixes = "yourTopMixes"
-    case basedOnRecentListening = "basedOnRecentListening"
+    case myMix = "My Mix"
+    case madeForJames = "Made For James"
+    case yourTopMixes = "Your Top Mixes"
+    case basedOnRecentListening = "Based On Recent Listening"
 }
 

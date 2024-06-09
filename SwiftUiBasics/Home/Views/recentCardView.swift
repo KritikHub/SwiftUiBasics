@@ -27,6 +27,7 @@ struct recentCardView: View {
             }
             .frame(width: 200, height: 60)
         }
+        .clipShape(RoundedRectangle(cornerRadius: 3))
     }
 }
 
