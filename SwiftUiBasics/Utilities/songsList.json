@@ -1,0 +1,194 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "name": "Shape of You",
+      "image": "https://example.com/shape_of_you.jpg",
+      "singers": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Someone Like You",
+      "image": "https://example.com/someone_like_you.jpg",
+      "singers": [
+        "Adele"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bohemian Rhapsody",
+      "image": "https://example.com/bohemian_rhapsody.jpg",
+      "singers": [
+        "Queen"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Havana",
+      "image": "https://example.com/havana.jpg",
+      "singers": [
+        "Camila Cabello"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Uptown Funk",
+      "image": "https://example.com/uptown_funk.jpg",
+      "singers": [
+        "Mark Ronson",
+        "Bruno Mars"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Despacito",
+      "image": "https://example.com/despacito.jpg",
+      "singers": [
+        "Luis Fonsi",
+        "Daddy Yankee"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Rolling in the Deep",
+      "image": "https://example.com/rolling_in_the_deep.jpg",
+      "singers": [
+        "Adele"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Roar",
+      "image": "https://example.com/roar.jpg",
+      "singers": [
+        "Katy Perry"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Old Town Road",
+      "image": "https://example.com/old_town_road.jpg",
+      "singers": [
+        "Lil Nas X",
+        "Billy Ray Cyrus"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "See You Again",
+      "image": "https://example.com/see_you_again.jpg",
+      "singers": [
+        "Wiz Khalifa",
+        "Charlie Puth"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Thinking Out Loud",
+      "image": "https://example.com/thinking_out_loud.jpg",
+      "singers": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Bad Guy",
+      "image": "https://example.com/bad_guy.jpg",
+      "singers": [
+        "Billie Eilish"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Believer",
+      "image": "https://example.com/believer.jpg",
+      "singers": [
+        "Imagine Dragons"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Let Her Go",
+      "image": "https://example.com/let_her_go.jpg",
+      "singers": [
+        "Passenger"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Radioactive",
+      "image": "https://example.com/radioactive.jpg",
+      "singers": [
+        "Imagine Dragons"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Counting Stars",
+      "image": "https://example.com/counting_stars.jpg",
+      "singers": [
+        "OneRepublic"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Perfect",
+      "image": "https://example.com/perfect.jpg",
+      "singers": [
+        "Ed Sheeran"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Wrecking Ball",
+      "image": "https://example.com/wrecking_ball.jpg",
+      "singers": [
+        "Miley Cyrus"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Hello",
+      "image": "https://example.com/hello.jpg",
+      "singers": [
+        "Adele"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Let It Go",
+      "image": "https://example.com/let_it_go.jpg",
+      "singers": [
+        "Idina Menzel"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Somebody That I Used to Know",
+      "image": "https://example.com/somebody_that_i_used_to_know.jpg",
+      "singers": [
+        "Gotye",
+        "Kimbra"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "All of Me",
+      "image": "https://example.com/all_of_me.jpg",
+      "singers": [
+        "John Legend"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "We Are Young",
+      "image": "https://example.com/we_are_young.jpg",
+      "singers": [
+        "fun.",
+        "Janelle Monáe"
+      ]
+    }
+  ]
+}
