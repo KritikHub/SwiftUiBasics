@@ -17,7 +17,7 @@ struct MainTabView: View {
                 HomeView()
                     .tag(TabItems.home.rawValue)
                 
-                SearchView()
+                SearchHomeView()
                     .tag(TabItems.search.rawValue)
                 
                 LibraryView()

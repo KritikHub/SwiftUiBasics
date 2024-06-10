@@ -8,26 +8,62 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @State var searchText: String = ""
+    @Binding var text: String
+    @State private var isEditing = false
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
-                .padding(.leading, 8)
-            TextField("Artists, songs, or podcasts", text: $searchText)
+            TextField("", text: $text, prompt: Text("Search query").foregroundColor(.gray))
                 .padding(8)
-                .foregroundColor(.black)
+                .padding(.horizontal, 25)
                 .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .background(Color.gray.opacity(0.3))
+                .keyboardType(.alphabet)
+                .onTapGesture {
+                    self.isEditing = true
+                }
+                .overlay(
+                   overlayView
+                )
         }
-        .frame(width:300, height: 50)
-        .padding(.horizontal, 16)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 5))
-        .shadow(color: .gray, radius: 5)
-}
+        .frame(height: 70)
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+    }
+
+    var overlayView: some View {
+        HStack {
+            Image(systemName: "arrow.backward")
+                .foregroundColor(.gray)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 8)
+            if isEditing {
+               cancelButton
+            } else {
+               cameraButton
+            }
+        }
+    }
+    var cancelButton: some View {
+        Button(action: {
+            self.isEditing = false
+            self.text = ""
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }) {
+            Image(systemName: "multiply")
+                .foregroundColor(.gray)
+                .padding(.trailing, 8)
+        }
+    }
     
+    var cameraButton: some View {
+        Button(action: {
+        }) {
+            Image(systemName: "camera")
+                .foregroundColor(.gray)
+                .padding(.trailing, 8)
+        }
+    }
 }
 
-#Preview {
-    SearchBar()
-}
