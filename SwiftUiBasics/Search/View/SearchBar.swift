@@ -27,9 +27,6 @@ struct SearchBar: View {
                 )
         }
         .frame(height: 70)
-        .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
     }
 
     var overlayView: some View {

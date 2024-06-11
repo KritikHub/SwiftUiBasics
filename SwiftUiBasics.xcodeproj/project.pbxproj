@@ -33,6 +33,9 @@
 		13D8B4262C16D1ED00CA6595 /* SearchAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */; };
 		13D8B4282C16FC6D00CA6595 /* SearchAlbumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */; };
 		13D8B42B2C17093D00CA6595 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */; };
+		13D8B42D2C1828AD00CA6595 /* LibraryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B42C2C1828AD00CA6595 /* LibraryHeaderView.swift */; };
+		13D8B42F2C182D4D00CA6595 /* FilterLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B42E2C182D4D00CA6595 /* FilterLibraryView.swift */; };
+		13D8B4322C18363300CA6595 /* LibraryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4312C18363300CA6595 /* LibraryDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllView.swift; sourceTree = "<group>"; };
 		13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumCard.swift; sourceTree = "<group>"; };
 		13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		13D8B42C2C1828AD00CA6595 /* LibraryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryHeaderView.swift; sourceTree = "<group>"; };
+		13D8B42E2C182D4D00CA6595 /* FilterLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLibraryView.swift; sourceTree = "<group>"; };
+		13D8B4312C18363300CA6595 /* LibraryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,7 @@
 		134FFA8F2C1588B400527E98 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				13D8B4302C18360500CA6595 /* Data */,
 				134FFA902C1588C700527E98 /* Views */,
 			);
 			path = Library;
@@ -225,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				134FFA912C1588DF00527E98 /* LibraryView.swift */,
+				13D8B42C2C1828AD00CA6595 /* LibraryHeaderView.swift */,
+				13D8B42E2C182D4D00CA6595 /* FilterLibraryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +268,14 @@
 				13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13D8B4302C18360500CA6595 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				13D8B4312C18363300CA6595 /* LibraryDataModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +352,7 @@
 				134FFA6A2C14412900527E98 /* recentPlayListModel.swift in Sources */,
 				134FFA832C147FC600527E98 /* HomeViewModel.swift in Sources */,
 				134FFA9A2C15CDA600527E98 /* SearchGenreCard.swift in Sources */,
+				13D8B42D2C1828AD00CA6595 /* LibraryHeaderView.swift in Sources */,
 				134FFA882C15823B00527E98 /* MainTabView.swift in Sources */,
 				134FFA562C14124000527E98 /* ContentView.swift in Sources */,
 				13D8B4262C16D1ED00CA6595 /* SearchAllView.swift in Sources */,
@@ -344,8 +362,10 @@
 				134FFA962C15890200527E98 /* PremiumView.swift in Sources */,
 				134FFA642C14218300527E98 /* CardModel.swift in Sources */,
 				134FFA622C14138200527E98 /* CardView.swift in Sources */,
+				13D8B4322C18363300CA6595 /* LibraryDataModel.swift in Sources */,
 				134FFA662C142FD300527E98 /* HomeView.swift in Sources */,
 				134FFA712C145F7000527E98 /* Song.swift in Sources */,
+				13D8B42F2C182D4D00CA6595 /* FilterLibraryView.swift in Sources */,
 				13D8B42B2C17093D00CA6595 /* SearchViewModel.swift in Sources */,
 				134FFA542C14124000527E98 /* SwiftUiBasicsApp.swift in Sources */,
 				134FFA9D2C15DAD200527E98 /* SearchDataModel.swift in Sources */,

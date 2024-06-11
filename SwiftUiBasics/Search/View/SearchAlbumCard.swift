@@ -24,25 +24,24 @@ struct SearchAlbumCard: View {
                     Text("Song - ")
                         .font(.system(size: 12))
                         .foregroundColor(.white)
-                    Text("")
+                    Text(song.singers.joined(separator: ","))
                         .font(.system(size: 12))
                         .foregroundColor(.white)
                     Spacer()
                 }
             }
+            Spacer()
             Button(action: {
+                print("button clicked ....")
             }){
                 Image(systemName: "multiply")
                     .resizable()
                     .foregroundColor(.gray)
-                    .frame(width: 20, height: 20)
+                    .frame(width: 16, height: 16)
                     .padding(.trailing, 8)
             }
         }
-        .padding()
+        .padding(.horizontal, 10)
     }
 }
 
-#Preview {
-    SearchAlbumCard()
-}

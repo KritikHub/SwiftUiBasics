@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SearchHomeView: View {
     
-    @State private var searchText = ""
     @State private var songs: [Song] = []
+    @State private var isSearchAllVisible = false
+    
     var viewModel = SearchViewModel()
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 20),
@@ -19,9 +20,11 @@ struct SearchHomeView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            SearchBar(text: $searchText)
-            SearchAllView(songs: songs)
-            //mainContent
+            if isSearchAllVisible {
+                SearchAllView(songs: songs)
+            } else {
+                mainContent
+            }
         }
         .background(Color.black)
         .task {
@@ -54,6 +57,7 @@ struct SearchHomeView: View {
     }
     var searchBar: some View {
         Button(action: {
+            isSearchAllVisible = true
         }){
             HStack {
                 Image(systemName: "magnifyingglass")
