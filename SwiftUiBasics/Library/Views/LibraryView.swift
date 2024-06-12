@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @State var isSheetVisible = false
+    @State var sortListValue: sortCategory = .mostRecent
     var body: some View {
         VStack {
             LibraryHeaderView()
@@ -30,7 +31,7 @@ struct LibraryView: View {
                         .resizable()
                         .frame(width: 16, height: 16)
                         .foregroundColor(.white)
-                    Text("Most recent")
+                    Text(sortListValue.rawValue)
                         .font(.system(size: 14))
                         .foregroundColor(.white)
                 }
@@ -46,26 +47,11 @@ struct LibraryView: View {
         }
         .padding()
         .sheet(isPresented: $isSheetVisible) {
-            VStack(alignment: .leading) {
-                Text("Sort by")
-                    .font(.system(size: 24))
-                    .foregroundStyle(.white)
-                    .fontWeight(.semibold)
-                List {
-                    ForEach(sortCategories.allCases, id: \.self) { value in
-                        Text(value.rawValue)
-                            .font(.system(size: 20))
-                            .foregroundStyle(.white)
-                            .fontWeight(.semibold)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets())
-                            .listRowBackground(Color.black)
-                    }
-                }
-                .background(Color.black)
-            }
-            .presentationDetents([.medium])
-            .background(Color.black)
+            FilterSheetView(sortItemVal: $sortListValue, isSheetVisibl: $isSheetVisible)
+                .padding()
+                .background(Color.black.opacity(0.8))
+                .presentationDetents([.medium])
+                .presentationContentInteraction(.scrolls)
         }
     }
 }

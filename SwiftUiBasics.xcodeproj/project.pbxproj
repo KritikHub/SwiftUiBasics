@@ -30,6 +30,7 @@
 		134FFA982C15CB1600527E98 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134FFA972C15CB1600527E98 /* SearchBar.swift */; };
 		134FFA9A2C15CDA600527E98 /* SearchGenreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134FFA992C15CDA600527E98 /* SearchGenreCard.swift */; };
 		134FFA9D2C15DAD200527E98 /* SearchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134FFA9C2C15DAD200527E98 /* SearchDataModel.swift */; };
+		135183532C19835300140DC5 /* FilterSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135183522C19835300140DC5 /* FilterSheetView.swift */; };
 		13D8B4262C16D1ED00CA6595 /* SearchAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */; };
 		13D8B4282C16FC6D00CA6595 /* SearchAlbumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */; };
 		13D8B42B2C17093D00CA6595 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */; };
@@ -63,6 +64,7 @@
 		134FFA972C15CB1600527E98 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		134FFA992C15CDA600527E98 /* SearchGenreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGenreCard.swift; sourceTree = "<group>"; };
 		134FFA9C2C15DAD200527E98 /* SearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataModel.swift; sourceTree = "<group>"; };
+		135183522C19835300140DC5 /* FilterSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheetView.swift; sourceTree = "<group>"; };
 		13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllView.swift; sourceTree = "<group>"; };
 		13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumCard.swift; sourceTree = "<group>"; };
 		13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				134FFA912C1588DF00527E98 /* LibraryView.swift */,
 				13D8B42C2C1828AD00CA6595 /* LibraryHeaderView.swift */,
 				13D8B42E2C182D4D00CA6595 /* FilterLibraryView.swift */,
+				135183522C19835300140DC5 /* FilterSheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				134FFA6A2C14412900527E98 /* recentPlayListModel.swift in Sources */,
+				135183532C19835300140DC5 /* FilterSheetView.swift in Sources */,
 				134FFA832C147FC600527E98 /* HomeViewModel.swift in Sources */,
 				134FFA9A2C15CDA600527E98 /* SearchGenreCard.swift in Sources */,
 				13D8B42D2C1828AD00CA6595 /* LibraryHeaderView.swift in Sources */,
