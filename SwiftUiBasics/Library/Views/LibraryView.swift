@@ -48,14 +48,8 @@ struct LibraryView: View {
         .padding()
         .sheet(isPresented: $isSheetVisible) {
             FilterSheetView(sortItemVal: $sortListValue, isSheetVisibl: $isSheetVisible)
-                .padding()
                 .background(Color.black.opacity(0.8))
-                .presentationDetents([.medium])
-                .presentationContentInteraction(.scrolls)
         }
     }
 }
 
-#Preview {
-    LibraryView()
-}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1328AD1A2C1AC88400E9C6CC /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328AD192C1AC88400E9C6CC /* LibraryViewModel.swift */; };
 		134FFA542C14124000527E98 /* SwiftUiBasicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134FFA532C14124000527E98 /* SwiftUiBasicsApp.swift */; };
 		134FFA562C14124000527E98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134FFA552C14124000527E98 /* ContentView.swift */; };
 		134FFA582C14124100527E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 134FFA572C14124100527E98 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1328AD192C1AC88400E9C6CC /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		134FFA502C14124000527E98 /* SwiftUiBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUiBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		134FFA532C14124000527E98 /* SwiftUiBasicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiBasicsApp.swift; sourceTree = "<group>"; };
 		134FFA552C14124000527E98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1328AD1B2C1AC89100E9C6CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1328AD192C1AC88400E9C6CC /* LibraryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		134FFA472C14124000527E98 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +234,7 @@
 		134FFA8F2C1588B400527E98 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1328AD1B2C1AC89100E9C6CC /* ViewModel */,
 				13D8B4302C18360500CA6595 /* Data */,
 				134FFA902C1588C700527E98 /* Views */,
 			);
@@ -358,6 +369,7 @@
 				134FFA9A2C15CDA600527E98 /* SearchGenreCard.swift in Sources */,
 				13D8B42D2C1828AD00CA6595 /* LibraryHeaderView.swift in Sources */,
 				134FFA882C15823B00527E98 /* MainTabView.swift in Sources */,
+				1328AD1A2C1AC88400E9C6CC /* LibraryViewModel.swift in Sources */,
 				134FFA562C14124000527E98 /* ContentView.swift in Sources */,
 				13D8B4262C16D1ED00CA6595 /* SearchAllView.swift in Sources */,
 				134FFA8A2C1583E000527E98 /* TabItems.swift in Sources */,
