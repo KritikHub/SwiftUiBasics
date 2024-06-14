@@ -12,19 +12,12 @@ struct FilterSheetView: View {
     private let viewModel = LibraryViewModel()
     @Binding var sortItemValue: sortCategory
     @Binding var isSheetVisible: Bool
-     @State var categories: [Category]
+    @State var categories: [Category] = []
     
     init(sortItemVal: Binding<sortCategory>, isSheetVisibl: Binding<Bool>) {
         self._sortItemValue = sortItemVal
         self._isSheetVisible = isSheetVisibl
-        categories = sortCategory.allCases.map { categoryType in
-            Category(category: categoryType)
-//            if categoryType == sortCategory.mostRecent {
-//                Category(category: categoryType, isSelected: true)
-//            } else {
-//                Category(category: categoryType)
-//            }
-        }
+        self._categories = State(initialValue: sortCategory.allCases.map { Category(category: $0, isSelected: $0 == $sortItemValue.wrappedValue) })
     }
     
     var body: some View {
@@ -34,8 +27,8 @@ struct FilterSheetView: View {
                 .foregroundStyle(.white)
                 .fontWeight(.semibold)
                 .padding(.top, 10)
-            ForEach($categories, id: \.self) { category in
-                sortSheetButton(category)
+            ForEach($categories) { $category in
+                sortSheetButton($category)
                     .padding(.top, 10)
             }
             HStack(alignment: .center) {
@@ -56,31 +49,35 @@ struct FilterSheetView: View {
         .presentationDetents([.medium])
     }
     
-    func sortSheetButton(category: Category) -> some View {
+    func sortSheetButton(_ category: Binding<Category>) -> some View {
         Button(action: {
             selectSortValue(category)
         }) {
             HStack {
-                Text(category.category.rawValue)
+                Text(category.wrappedValue.category.rawValue)
                     .font(.system(size: 18))
-                    .foregroundStyle(category.isSelected ? .green : .white)
+                    .foregroundStyle(category.wrappedValue.isSelected ? .green : .white)
                     .fontWeight(.semibold)
                 Spacer()
-                if category.isSelected {
+                if category.wrappedValue.isSelected {
                     Image(systemName: "checkmark")
-                        .foregroundColor(category.isSelected ? .green : .white)
+                        .foregroundColor(category.wrappedValue.isSelected ? .green : .white)
                         .frame(width: 15, height: 15, alignment: .trailing)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
-    func selectSortValue(_ category: Binding<Category>) {
-        if let index = categories.firstIndex(where: {$0.category == category.wrappedValue.category}) {
-            categories[index].toggleSelection()
-            sortItemValue = category.wrappedValue.category
-            isSheetVisible = false
+    func selectSortValue(_ selectedCategory: Binding<Category>) {
+        for i in categories.indices {
+            if categories[i].category == selectedCategory.wrappedValue.category {
+                categories[i].toggleSelection()
+            } else {
+                categories[i].isSelected = false
+            }
         }
+        sortItemValue = selectedCategory.wrappedValue.category
+        isSheetVisible = false
     }
 }
 

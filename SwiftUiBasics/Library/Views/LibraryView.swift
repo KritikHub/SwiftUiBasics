@@ -8,17 +8,33 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @State var isSheetVisible = false
-    @State var sortListValue: sortCategory = .mostRecent
+    @State private var viewModel = LibraryViewModel()
+    @State private var isSheetVisible = false
+    @State private var sortListValue: sortCategory = .mostRecent
+    @State private var songs: [Song] = []
+    
     var body: some View {
         VStack {
             LibraryHeaderView()
-            FilterLibraryView()
-            mostRecent
+            mainContent
             Spacer()
         }
         .padding()
         .background(Color.black)
+        .onAppear {
+           songs = viewModel.fetchSongs()
+        }
+    }
+    
+    @ViewBuilder
+    var mainContent: some View {
+        ScrollView {
+            FilterLibraryView()
+            mostRecent
+            ForEach(songs) { song in
+                PlaylistCardView()
+            }
+        }
     }
     
     var mostRecent: some View {

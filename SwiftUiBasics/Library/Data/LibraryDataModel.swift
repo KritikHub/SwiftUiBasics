@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Category: Hashable {
+struct Category: Identifiable {
+    let id = UUID()
     var category: sortCategory
     var isSelected: Bool = false
     
