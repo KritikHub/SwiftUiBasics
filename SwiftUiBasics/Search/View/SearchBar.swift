@@ -11,37 +11,45 @@ struct SearchBar: View {
     @Binding var text: String
     @State private var isEditing = false
     var body: some View {
+      contentView
+    }
+
+    var contentView: some View {
         HStack {
+            Button(action: {
+                
+            }) {
+                Image(systemName: "arrow.backward")
+                    .foregroundColor(.gray)
+                    .padding(.leading, 8)
+            }
             TextField("", text: $text, prompt: Text("Search query").foregroundColor(.gray))
-                .padding(8)
                 .padding(.horizontal, 25)
                 .fontWeight(.semibold)
+                .frame(height: 40)
+                .background(Color.red)
                 .foregroundColor(.white)
-                .background(Color.gray.opacity(0.3))
-                .keyboardType(.alphabet)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        if isEditing {
+                            cancelButton
+                        } else {
+                            cameraButton
+                        }
+                    }
+                    .padding(.horizontal, 4)
+                )
                 .onTapGesture {
                     self.isEditing = true
                 }
-                .overlay(
-                   overlayView
-                )
         }
-        .frame(height: 70)
+        .clipped()
+        .frame(maxHeight: 70)
+        .padding(.horizontal, 10)
+        .background(Color.gray.opacity(0.3))
     }
-
-    var overlayView: some View {
-        HStack {
-            Image(systemName: "arrow.backward")
-                .foregroundColor(.gray)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 8)
-            if isEditing {
-               cancelButton
-            } else {
-               cameraButton
-            }
-        }
-    }
+    
     var cancelButton: some View {
         Button(action: {
             self.isEditing = false

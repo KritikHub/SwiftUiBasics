@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @State var selectedTab = 0
+    @StateObject var navigationManager = NavigationManager<Destination>()
     let tab: TabItems = .home
     
     var body: some View {
@@ -28,6 +29,7 @@ struct MainTabView: View {
                 
             }
             .tabViewStyle(DefaultTabViewStyle())
+            .environmentObject(navigationManager)
             VStack {
                 Spacer()
                 HStack {

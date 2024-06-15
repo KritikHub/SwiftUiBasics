@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUiBasicsApp: App {
+    @StateObject var navigationManager = NavigationManager<Destination>()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(navigationManager)
         }
     }
 }
