@@ -1,6 +1,4 @@
-//
-//  LibraryHeaderView.swift
-//  SwiftUiBasics
+//]
 //
 //  Created by Manish Patidar on 11/06/24.
 //

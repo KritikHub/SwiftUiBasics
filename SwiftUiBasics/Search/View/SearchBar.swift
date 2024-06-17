@@ -9,9 +9,16 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var text: String
-    @State private var isEditing = false
+    @Binding var isEditing: Bool
+    @FocusState private var isFocussed: Bool
+    
     var body: some View {
-      contentView
+        VStack {
+            contentView
+                .padding(.top, 2)
+        }
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.bottom)
     }
 
     var contentView: some View {
@@ -21,13 +28,12 @@ struct SearchBar: View {
             }) {
                 Image(systemName: "arrow.backward")
                     .foregroundColor(.gray)
-                    .padding(.leading, 8)
+                    .padding(.leading, 12)
             }
             TextField("", text: $text, prompt: Text("Search query").foregroundColor(.gray))
                 .padding(.horizontal, 25)
                 .fontWeight(.semibold)
-                .frame(height: 40)
-                .background(Color.red)
+                .frame(height: 50)
                 .foregroundColor(.white)
                 .overlay(
                     HStack {
@@ -40,13 +46,13 @@ struct SearchBar: View {
                     }
                     .padding(.horizontal, 4)
                 )
+                .focused($isFocussed)
                 .onTapGesture {
+                    self.isFocussed = true
                     self.isEditing = true
                 }
         }
-        .clipped()
-        .frame(maxHeight: 70)
-        .padding(.horizontal, 10)
+        .frame(height: 50)
         .background(Color.gray.opacity(0.3))
     }
     

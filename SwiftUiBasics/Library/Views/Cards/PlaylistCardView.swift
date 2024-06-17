@@ -9,31 +9,25 @@ import SwiftUI
 
 struct PlaylistCardView: View {
     @State var filterCategory: filterCategories = .artists
+    @State var isGridView: Bool
     
     var body: some View {
-        HStack {
+        if isGridView {
+            PlaylistGridCardView(isPinVisible: isPinVisible,
+                                 titleSelection: titleSelection,
+                                 subtitleText: subtitleText)
+        } else {
             contentView
-            Spacer()
         }
-        .padding(.horizontal, 10)
     }
     
     @ViewBuilder
-      var contentView: some View {
-          switch filterCategory {
-          case .playlists, .podcastsAndShows:
-              genreImage
-              titleView
-          case .artists:
-              artistCard
-              titleView
-          }
-      }
-    var genreImage: some View {
-        Image("spotifyImage")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 60, height: 60)
+    var contentView: some View {
+        HStack {
+            artistCard
+            titleView
+            Spacer()
+        }
     }
     
     var artistCard: some View {
@@ -41,7 +35,7 @@ struct PlaylistCardView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 60, height: 60)
-            .clipShape(Circle())
+            .clipShape(filterCategory == .artists ? AnyShape(Circle()) : AnyShape(Rectangle()))
     }
     
     var titleView: some View {

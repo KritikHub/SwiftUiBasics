@@ -8,30 +8,27 @@
 import SwiftUI
 
 struct SearchAllView: View {
-    @State private var searchText = ""
+    @State var searchText = ""
+    @State var isEditing = false
+    
     var songs: [Song]
     var body: some View {
         VStack(alignment: .leading) {
-            SearchBar(text: $searchText)
+            SearchBar(text: $searchText, isEditing: $isEditing)
             Text("Recent searches")
                 .font(.system(size: 16))
                 .fontWeight(.medium)
                 .padding(.leading, 10)
                 .foregroundColor(.white)
-            List {
+            ScrollView {
                 ForEach(songs) { song in
                     SearchAlbumCard(song: song)
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color.black)
                 }
             }
-            .listStyle(PlainListStyle())
-            .listRowSpacing(nil)
-            .environment(\.defaultMinListRowHeight, 0)
         }
         .background(Color.black)
         .onTapGesture {
+            isEditing = false
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }

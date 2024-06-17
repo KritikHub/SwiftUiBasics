@@ -11,10 +11,10 @@ struct SearchAlbumCard: View {
     var song: Song
     var body: some View {
         HStack {
-            Image("locPermission")
+            Image("spotifyImage")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 60, height: 60)
+                .frame(width: 40, height: 40)
             VStack(alignment: .leading) {
                 Text(song.name)
                     .font(.system(size: 16))
@@ -32,16 +32,16 @@ struct SearchAlbumCard: View {
             }
             Spacer()
             Button(action: {
-                print("button clicked ....")
             }){
                 Image(systemName: "multiply")
                     .resizable()
                     .foregroundColor(.gray)
                     .frame(width: 16, height: 16)
-                    .padding(.trailing, 8)
+                    .padding(.trailing, 5)
             }
         }
         .padding(.horizontal, 10)
+        .padding(.top, 5)
     }
 }
 

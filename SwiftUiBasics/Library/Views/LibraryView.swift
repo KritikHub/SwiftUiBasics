@@ -12,6 +12,11 @@ struct LibraryView: View {
     @State private var isSheetVisible = false
     @State private var sortListValue: sortCategory = .mostRecent
     @State private var songs: [Song] = []
+    @State private var isGridVisible = false
+    let columns: [GridItem] = [
+        GridItem(.flexible(), spacing: 20),
+        GridItem(.flexible(), spacing: 20)
+    ]
     
     var body: some View {
         VStack {
@@ -31,12 +36,27 @@ struct LibraryView: View {
         ScrollView {
             FilterLibraryView()
             mostRecent
-            ForEach(songs) { song in
-                PlaylistCardView()
+            if isGridVisible {
+               showGridContent
+            } else {
+                showListContent
             }
         }
     }
     
+    var showListContent: some View {
+        ForEach(songs) { song in
+            PlaylistCardView(isGridView: isGridVisible)
+        }
+    }
+    
+    var showGridContent: some View {
+        LazyVGrid(columns: columns) {
+            ForEach(songs) { song in
+                PlaylistCardView(isGridView: isGridVisible)
+            }
+        }
+    }
     var mostRecent: some View {
         HStack {
             Button(action: {
@@ -53,12 +73,12 @@ struct LibraryView: View {
                 }
             }
             Spacer()
-            Image(systemName: "square.grid.2x2")
+            Image(systemName: isGridVisible ? "list.dash" : "square.grid.2x2")
                 .resizable()
                 .frame(width: 16, height: 16)
                 .foregroundColor(.white)
                 .onTapGesture {
-                    print("tapped ...")
+                    isGridVisible.toggle()
                 }
         }
         .padding()

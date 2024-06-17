@@ -36,6 +36,7 @@
 		13703CD52C1D684600241BCE /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13703CD42C1D684600241BCE /* NavigationManager.swift */; };
 		13703CD72C1D6A2100241BCE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13703CD62C1D6A2100241BCE /* Destination.swift */; };
 		13703CD92C1D729200241BCE /* NavigationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13703CD82C1D729200241BCE /* NavigationPath.swift */; };
+		13703CDB2C200BA100241BCE /* PlaylistGridCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13703CDA2C200BA100241BCE /* PlaylistGridCardView.swift */; };
 		13D8B4262C16D1ED00CA6595 /* SearchAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */; };
 		13D8B4282C16FC6D00CA6595 /* SearchAlbumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */; };
 		13D8B42B2C17093D00CA6595 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */; };
@@ -75,6 +76,7 @@
 		13703CD42C1D684600241BCE /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		13703CD62C1D6A2100241BCE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		13703CD82C1D729200241BCE /* NavigationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPath.swift; sourceTree = "<group>"; };
+		13703CDA2C200BA100241BCE /* PlaylistGridCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistGridCardView.swift; sourceTree = "<group>"; };
 		13D8B4252C16D1ED00CA6595 /* SearchAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllView.swift; sourceTree = "<group>"; };
 		13D8B4272C16FC6D00CA6595 /* SearchAlbumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumCard.swift; sourceTree = "<group>"; };
 		13D8B42A2C17093D00CA6595 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				1355E7B12C1C1079002D066D /* PlaylistCardView.swift */,
+				13703CDA2C200BA100241BCE /* PlaylistGridCardView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				13703CD72C1D6A2100241BCE /* Destination.swift in Sources */,
 				134FFA712C145F7000527E98 /* Song.swift in Sources */,
 				13D8B42F2C182D4D00CA6595 /* FilterLibraryView.swift in Sources */,
+				13703CDB2C200BA100241BCE /* PlaylistGridCardView.swift in Sources */,
 				13D8B42B2C17093D00CA6595 /* SearchViewModel.swift in Sources */,
 				134FFA542C14124000527E98 /* SwiftUiBasicsApp.swift in Sources */,
 				134FFA9D2C15DAD200527E98 /* SearchDataModel.swift in Sources */,

@@ -46,7 +46,7 @@ struct FilterSheetView: View {
         }
         .padding()
         .padding(.leading, 10)
-        .presentationDetents([.medium])
+        .presentationDetents([.height(350)])
     }
     
     func sortSheetButton(_ category: Binding<Category>) -> some View {
